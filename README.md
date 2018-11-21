@@ -1,4 +1,3 @@
-# Text
 A collection of tutorials &amp; more.
 
 # SSL CERTIFICATION
