@@ -53,6 +53,9 @@ Can be done through Homebrew, but to select a specific version, do the following
 - plg-config --modversion opencv
 ___________________________________________________________________________________________________________________________
 # SSL CERTIFICATION
+Check out [letsencrypt.org](https://letsencrypt.org/) for auto renewal of SSL certificates.
+
+
 Copied from https://medium.com/@rajanmaharjan/secure-your-mongodb-connections-ssl-tls-92e2addb3c89
 Written by Rajan Maharjan | Software Engineer | Jun 15, 2017
 ## Creating own SSL CA to dump our self-signed certificate
