@@ -1,4 +1,4 @@
-A collection of tutorials &amp; more.
+*A collection of tutorials &amp; more.*
 
 ##### Table of Contents  
 [1. OpenCV Install Instructions (Linux)](#installing-opencv-on-linux-macos-below)  
