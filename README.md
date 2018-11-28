@@ -1,5 +1,57 @@
 A collection of tutorials &amp; more.
 
+# Installing OpenCV on Linux (MacOS below)
+## On Nvidia Jetson TX1 & TX2
+Configuration
+
+- Jetpack -> install without OpenCV
+- Install camera drivers (Leopard Imaging or others) (optional)
+- sudo apt-get update
+- sudo apt-get upgrade
+- sudo apt-get install -y build-essential cmake
+- sudo apt-get install -y libgtkglext1-dev libvtk6-dev
+- sudo apt-get install -y zlib1g-dev libjpeg-dev libwebp-dev libpng-dev libtiff5-dev libjasper-dev libopenexr-dev libgdal-dev
+- sudo apt-get install -y libdc1394-22-dev libavcodec-dev libavformat-dev libswscale-dev libtheora-dev libvorbis-dev libxvidcore-dev libx264-dev yasm libopencore-amrnb-dev libopencore-amrwb-dev libv4l-dev libxine2-dev
+- sudo apt-get install -y libtbb-dev libeigen3-dev
+- sudo apt-get install -y libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
+
+OpenCV (with CUDA 9.0)
+
+- git clone opencv repo
+- cd opencv
+- git checkout 3.4.0
+- mkdir build
+- cd build
+- cmake -DWITH_OPENGL=OFF -DFORCE_VTK=ON -DWITH_TBB=ON -DWITH_GDAL=ON -DWITH_XINE=ON -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-9.0 -DWITH_GSTREAMER=ON     -DWITH_CUDA=ON -DBUILD_EXAMPLES=OFF -DENABLE_PRECOMPILED_HEADERS=OFF ..
+- make -j4
+- sudo make install
+- sudo ldconfig
+
+Video pb ? try adding -D WITH_LIBV4L=ON to the cmake command
+
+**CUDA** problem? Try :
+```bash
+export PATH=/usr/local/cuda-9.0/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64 ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+```
+
+# Installing OpenCV on MacOS
+Can be done through Homebrew, but to select a specific version, do the following:
+
+- Install Xcode
+- git clone opencv repo
+- cd opencv
+- git checkout 3.4.0
+- mkdir build
+- cd build
+- cmake -DWITH_OPENGL=ON -DFORCE_VTK=ON -DWITH_TBB=ON -DWITH_GDAL=ON -DWITH_XINE=ON -DWITH_GSTREAMER=ON -DBUILD_EXAMPLES=OFF -DENABLE_PRECOMPILED_HEADERS=OFF ..
+- make -j4
+- sudo make install
+
+# Check pkg-config
+- pkg-config --cflags --libs opencv
+- plg-config --modversion opencv
+___________________________________________________________________________________________________________________________
 # SSL CERTIFICATION
 Copied from https://medium.com/@rajanmaharjan/secure-your-mongodb-connections-ssl-tls-92e2addb3c89
 Written by Rajan Maharjan | Software Engineer | Jun 15, 2017
