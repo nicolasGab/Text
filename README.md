@@ -1,12 +1,12 @@
 A collection of tutorials &amp; more.
 
 ##### Table of Contents  
-[OpenCV Install Instructions (Linux)](# Installing OpenCV on Linux (MacOS below))  
+[OpenCV Install Instructions (Linux)](#Installing OpenCV on Linux (MacOS below))  
 [OpenCV Install Instructions (MacOS)](# Installing OpenCV on MacOS)
 [SSL](# SSL CERTIFICATION)
 
 
-# Installing OpenCV on Linux (MacOS below)
+#Installing OpenCV on Linux (MacOS below)
 ## On Nvidia Jetson TX1 & TX2
 Configuration
 
