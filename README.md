@@ -1,10 +1,9 @@
 A collection of tutorials &amp; more.
 
 ##### Table of Contents  
-[OpenCV Install Instructions (Linux)](#installing-opencv-on-linux-macos-below)  
-[OpenCV Install Instructions (MacOS)](#installing-opencv-on-macos)
-
-[SSL](#ssl-certification)
+[1. OpenCV Install Instructions (Linux)](#installing-opencv-on-linux-macos-below)  
+[2. OpenCV Install Instructions (MacOS)](#installing-opencv-on-macos)  
+[3. SSL](#ssl-certification)
 
 
 # Installing OpenCV on Linux (MacOS below)
